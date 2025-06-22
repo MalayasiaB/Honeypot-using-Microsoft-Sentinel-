@@ -23,11 +23,11 @@ Create Resource Group: <br/>
 <img src="https://i.imgur.com/tRm4NJg.png" height="80%" width="80%" alt="Honeypot Steps"/>
 <br />
 <br />
-Navigate to Virtual Network and Create, named Corp-Net-East1:  <br/>
+Navigated to Virtual Network and created, named Corp-Net-East1:  <br/>
 <img src="https://i.imgur.com/47MX9lj.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Navigate to Virtual Machines and Create: <br/>
+Navigated to Virtual Machines and created: <br/>
 <img src="https://i.imgur.com/jWwAmip.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
@@ -39,7 +39,7 @@ Creating the new "Danger_AllowAny" Rule and using "*" in the Destination port ra
 <img src="https://i.imgur.com/w55HAu6.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Using the public IP assigned to my vm and remoting in :  <br/>
+Using the public IP assigned to my vm and remoting in:  <br/>
 <img src="https://i.imgur.com/35tp9YL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
@@ -47,11 +47,11 @@ Once inside naviagated to wf.msc for windows firewall and disabled the internal 
 <img src="https://i.imgur.com/rUD5wwo.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Pinged vm from local computer to ensure I could reach it over the public internet. This step ensured that if i could, hackers could:  <br/>
+Pinged vm from local computer to ensure I could reach it over the public internet. This step ensured that if i could, hackers could also:  <br/>
 <img src="https://i.imgur.com/gGu4cVJ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Logged out of vm and logged back in with failed attempts to create log data:  <br/>
+Logged out of my vm and intentionally failed logging in to create log data:  <br/>
 <img src="https://i.imgur.com/Ks7kAO3.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
@@ -59,7 +59,7 @@ More failed logins with a non-existent user:  <br/>
 <img src="https://i.imgur.com/ReT65QS.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Opened windows Event Viewer and filter for Event ID to 4625 to display my failed logins:  <br/>
+Opened windows Event Viewer and filtered for Event ID 4625 to display my failed logins:  <br/>
 <img src="https://i.imgur.com/6SyeThr.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
@@ -71,7 +71,7 @@ Created Microsoft Sentinel, added my log analytics workspace to it, clicked cont
 <img src="https://i.imgur.com/cItEHJ8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-After installation I configured it. Allowing connection from my VM to my log analytics workspace via the Windows Security Azure Monitoring Agent:  <br/>
+After installation I configured it. The configuration provides connection from my VM to my log analytics workspace via the Windows Security Azure Monitoring Agent:  <br/>
 <img src="https://i.imgur.com/KilkyW2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
@@ -83,7 +83,7 @@ Now with AMA configured, logs can be sent to our Log Analytics Workspace which i
 <img src="https://i.imgur.com/UpJeE1z.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Using KQL I queried the windows logs and you can see a difference from the above photo in log attempts. The above photo just displayed my failed logons from earlier. I allowed 30 mins to pass and you can see there are 839 results at the bottom left:  <br/>
+Using KQL I queried the windows logs and you can see a difference from the above photo in log attempts. The above photo just displayed my failed logons from earlier. I allowed 30 mins to pass and you can see there are 839 results at the bottom right:  <br/>
 <img src="https://i.imgur.com/pAWaHcl.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
@@ -91,7 +91,7 @@ From here I created the following query for Brute Force Detection. Failed logons
 <img src="https://i.imgur.com/qTtEVPh.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-I used this query to create an alert,mapped it to MITRE T110 for Brute force and set it to email me when triggered:  <br/>
+I used this query to create an alert,mapped it to MITRE T1110 for Brute force and set it to email me when triggered:  <br/>
 <img src="https://i.imgur.com/mcJ6OeD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
@@ -103,7 +103,7 @@ Running the playbook:  <br/>
 <img src="https://i.imgur.com/yWeFral.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Some email correspondence for configurations set:  <br/>
+Some email correspondence for the configurations set:  <br/>
 <img src="https://i.imgur.com/BaevIyV.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
   
